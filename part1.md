@@ -28,6 +28,13 @@
 
 ---
 
+
+## Setup
+
+- Clone [the starter repository](https://github.com/https://github.com/tx00-resources-en/w8-pair-prog) into a separate folder.
+
+---
+
 ## Deliverables
 
 1. **Code** for **API V1** (*without* authentication)  
