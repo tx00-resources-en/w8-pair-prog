@@ -31,7 +31,7 @@
 
 ## Setup
 
-- Clone [the starter repository](https://github.com/https://github.com/tx00-resources-en/w8-pair-prog) into a separate folder.
+- Clone [the starter repository](https://https://github.com/tx00-resources-en/w8-pair-prog) into a separate folder.
 
 ---
 
