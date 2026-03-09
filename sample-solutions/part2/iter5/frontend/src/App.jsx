@@ -1,0 +1,41 @@
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// pages & components
+import Home from "./pages/HomePage";
+import AddPropertyPage from "./pages/AddPropertyPage";
+import Navbar from "./components/Navbar";
+import NotFoundPage from "./pages/NotFoundPage";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage";
+
+const App = () => {
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || null
+  );
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar user={user} setUser={setUser} />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add-property" element={<AddPropertyPage />} />
+            <Route
+              path="/signup"
+              element={<SignupPage setUser={setUser} />}
+            />
+            <Route
+              path="/login"
+              element={<LoginPage setUser={setUser} />}
+            />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
+  );
+};
+
+export default App;
